@@ -9,7 +9,7 @@ $(document).ready(function() {
     /*$('#ClientDetailss').DataTable({
         responsive: true
     });*/
-    TotalUserCount();
+    //TotalUserCount();
 
 });
 function TotalUserCount()
