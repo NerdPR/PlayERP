@@ -3,8 +3,8 @@
  */
 var ClienObj=[];
 $(document).ready(function() {
-    $('#ClientForm').validator();
-    $('#clienthearingdate').daterangepicker({
+    $('#ClientForm').validator();    
+    $('#kiddob').daterangepicker({
         singleDatePicker: true,
         startDate: moment(),
         locale:{format: 'DD/MMM/YYYY'}

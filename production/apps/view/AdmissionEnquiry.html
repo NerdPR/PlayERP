@@ -2,7 +2,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>-Client-</h2>                
+                <h2>-Admission Enquiry-</h2>                
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -22,41 +22,134 @@
             </div>
             <div class="x_content">
                 <br />
-                <form id="ClientForm" method="post" enctype="multipart/form-data" data-toggle="validator" class="form-horizontal form-label-left" onsubmit="SaveClient();return false;">
+                <form id="ClientForm" method="post" enctype="multipart/form-data" data-toggle="validator" class="form-horizontal form-label-left input_mask" onsubmit="SaveClient();return false;">
 
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientname">Client Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdmissionEnqFor">Enq. For
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientname" name="clientname" onblur="FindClientName(this);" class="form-control col-md-7 col-xs-12" placeholder="Client Name" required>
+                            <select class="form-control" id="AdmissionEnqFor" name="AdmissionEnqFor">
+                                <option value="Summer Camp">Summer Camp</option>
+                                <option value="Evening Activities">Evening Activities</option>
+                                <option value="Admission">Admission</option>
+                                <option value="Daycare">Daycare</option>
+                            </select>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientphno">Mobile No <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameofkid">Name Of Kid <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" id="clientphno" name="clientphno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                            <input type="text" id="nameofkid" name="nameofkid" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientaddress">Address
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kiddob">Kid's DOB
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea class="form-control" rows="5" id="clientaddress" name="clientaddress" placeholder="Address for communication" ></textarea>
+                            <input type="text" id="kiddob" name="kiddob" class="form-control col-md-7 col-xs-12">
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientcasetype">Type
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kidage">Kid's Age <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control" id="clientcasetype" name="clientcasetype">
-                                <option value="CIVIL">Civil</option>
-                                <option value="CRIMINAL">Criminal</option>
-                                <option value="INSURANCE">Insurance</option>
-                                <option value="CONSUMER">Consumer</option>
+                            <input type="number" id="kidage" name="kidage" placeholder="Age" min="0" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>    
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameoffather">Name Of Father <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="nameoffather" name="nameoffather" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fathermobno">Mobile No <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="number" id="fathermobno" name="fathermobno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fatheroccupation">Occupation <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="fatheroccupation" name="fatheroccupation" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>  
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameofmother">Name Of Mother <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="nameofmother" name="nameofmother" placeholder="Eg. Sarah" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mothermobno">Mobile No <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="number" id="mothermobno" name="mothermobno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="motheroccupation">Occupation <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="motheroccupation" name="motheroccupation" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>    
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="resaddress">Res. Address
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <textarea class="form-control" rows="5" id="resaddress" name="resaddress" placeholder="Address for communication" ></textarea>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="landmark">Landmark
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" id="landmark" name="landmark">
+                                <option value="AGS Park">AGS Park</option>
+                                <option value="Arasamaram">Arasamaram</option>
+                                <option value="Sai Baba Temple">Sai Baba Temple</option>
+                                <option value="Subhasree Nagar">Subhasree Nagar</option>
+                                <option value="Mangala Nagar">Mangala Nagar</option>
+                                <option value="Kumutham Nagar Park">Kumutham Nagar Park</option>
+                                <option value="AGS Garden Last">AGS Garden Last</option>
+                                <option value="Sakthi Nagar-Post Office">Sakthi Nagar - Post Office</option>
+                                <option value="Amma Mess-Madhananthapuram">Amma Mess-Madhananthapuram</option>
+                                <option value="Kedhar Hospital">Kedhar Hospital</option>
+                                <option value="Madhananthapuram Water Tank ">Madhananthapuram Water Tank</option>
+                                <option value="Kolapakkam Road">Kolapakkam Road</option>
+                                
+                            </select>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdmissionEnqFor">How do you know TVME Kids
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" id="AdmissionEnqFor" name="AdmissionEnqFor">
+                                <option value="Phamplets">Phamplets</option>
+                                <option value="Posters">Posters</option>
+                                <option value="Banners">Banners</option>
+                                <option value="Friends">Friends</option>
+                                <option value="Newspaper">Newspaper</option>
                             </select>
                         </div>
                         <div class="help-block with-errors"></div>
@@ -125,4 +218,4 @@
         </div>
     </div>
 </div>
-<script src="apps/controller/Client.js"></script>
+<script src="apps/controller/admissionenquiry.js"></script>
