@@ -4,19 +4,59 @@ require_once '../../../../dbconfig.php';
 
 if($_POST)
 {
-    $clientname = $_POST['clientname'];
-    $clientphno = $_POST['clientphno'];
-    $clientaddress = $_POST['clientaddress'];
-    $clientcasetype = $_POST['clientcasetype'];
-    $clienttotalamount = $_POST['clienttotalamount'];
-    $clientpaidamount = $_POST['clientpaidamount'];
-    $clientbalamount = $_POST['clientbalamount'];
-    $clientcasestage = $_POST['clientcasestage'];
-    $clienthearingdate = $_POST['clienthearingdate'];
-    $clienthearingdate=str_replace("/","-",$clienthearingdate);
-    $date=date_create($clienthearingdate);
-    $clienthearingdate= date_format($date,"Y/m/d H:i:s");
-    $clienttype=$_POST['clienttype'];
+    $AdmissionEnqFor = $_POST['AdmissionEnqFor'];
+    $nameofkid = $_POST['nameofkid'];
+    
+    $kiddob = $_POST['kiddob'];
+    $kiddob=str_replace("/","-",$kiddob);
+    $kiddobdate=date_create($kiddob);
+    $kiddob= date_format($kiddobdate,"Y/m/d H:i:s");
+
+    $kidage = $_POST['kidage'];
+    $nameoffather = $_POST['nameoffather'];
+    $fathermobno = $_POST['fathermobno'];
+    $fatheroccupation = $_POST['fatheroccupation'];
+    $nameofmother = $_POST['nameofmother'];
+    $mothermobno = $_POST['mothermobno'];    
+    $motheroccupation=$_POST['motheroccupation'];
+    $resaddress=$_POST['resaddress'];
+    $landmark=$_POST['landmark'];
+    $howdouknow=$_POST['howdouknow'];
+    $anyreference=$_POST['anyreference'];
+    $feetold=$_POST['feetold'];
+    $offergiven=$_POST['offergiven'];
+    $findfee=$_POST['findfee'];
+    $typeofenquiry=$_POST['typeofenquiry'];
+    $status=$_POST['status'];
+    $finalstatus=$_POST['finalstatus'];
+    
+    $finaldate = $_POST['finaldate'];
+    $finaldate=str_replace("/","-",$finaldate);
+    $finaldatedate=date_create($finaldate);
+    $finaldate= date_format($finaldatedate,"Y/m/d H:i:s");
+
+    $followup1=$_POST['followup1'];
+
+    $followup1Date = $_POST['followup1Date'];
+    $followup1Date=str_replace("/","-",$followup1Date);
+    $followup1Datedate=date_create($followup1Date);
+    $followup1Date= date_format($followup1Datedate,"Y/m/d H:i:s");
+
+    $followup2=$_POST['followup2'];
+
+    $followup2Date = $_POST['followup2Date'];
+    $followup2Date=str_replace("/","-",$followup2Date);
+    $followup2Datedate=date_create($followup2Date);
+    $followup2Date= date_format($followup2Datedate,"Y/m/d H:i:s");
+
+    $followup3=$_POST['followup3'];
+    
+    $followup3Date = $_POST['followup3Date'];
+    $followup3Date=str_replace("/","-",$followup3Date);
+    $followup3Datedate=date_create($followup3Date);
+    $followup3Date= date_format($followup3Datedate,"Y/m/d H:i:s");
+
+    
 
     /*$fileName = $_FILES['Attach']['name'];
     $tmpName  = $_FILES['Attach']['tmp_name'];

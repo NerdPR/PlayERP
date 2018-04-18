@@ -22,10 +22,10 @@
             </div>
             <div class="x_content">
                 <br />
-                <form id="ClientForm" method="post" enctype="multipart/form-data" data-toggle="validator" class="form-horizontal form-label-left input_mask" onsubmit="SaveClient();return false;">
+                <form id="AdmissionEnquiry" method="post" enctype="multipart/form-data" data-toggle="validator" class="form-horizontal form-label-left input_mask" onsubmit="SaveClient();return false;">
 
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdmissionEnqFor">Enq. For
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="AdmissionEnqFor">Enq. For
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <select class="form-control" id="AdmissionEnqFor" name="AdmissionEnqFor">
@@ -38,80 +38,64 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameofkid">Name Of Kid <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-sm-3">
+                        <label  for="nameofkid">Name Of Kid <span class="required">*</span>
+                        </label>                        
                             <input type="text" id="nameofkid" name="nameofkid" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kiddob">Kid's DOB
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-sm-3">
+                            <label  for="kiddob">Kid's DOB
+                            </label>
                             <input type="text" id="kiddob" name="kiddob" class="form-control col-md-7 col-xs-12">
                         </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kidage">Kid's Age <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-sm-3">
+                            <label  for="kidage">Kid's Age <span class="required">*</span>
+                            </label>
                             <input type="number" id="kidage" name="kidage" placeholder="Age" min="0" class="form-control col-md-7 col-xs-12" required>
                         </div>
                         <div class="help-block with-errors"></div>
-                    </div>    
+                    </div>
+                  
 
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameoffather">Name Of Father <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-sm-3">
+                        <label  for="nameoffather">Name Of Father <span class="required">*</span>
+                        </label>                        
                             <input type="text" id="nameoffather" name="nameoffather" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fathermobno">Mobile No <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" id="fathermobno" name="fathermobno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        <div class="col-sm-3">
+                                <label  for="fathermobno">Mobile No <span class="required">*</span>
+                                </label>
+                                <input type="number" id="fathermobno" name="fathermobno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="col-sm-3">
+                                <label  for="fatheroccupation">Occupation <span class="required">*</span>
+                                </label>
+                                <input type="text" id="fatheroccupation" name="fatheroccupation" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
                         <div class="help-block with-errors"></div>
-                    </div>
+                    </div>                   
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fatheroccupation">Occupation <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="fatheroccupation" name="fatheroccupation" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                    </div>  
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameofmother">Name Of Mother <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-sm-3">
+                        <label  for="nameofmother">Name Of Mother <span class="required">*</span>
+                        </label>                        
                             <input type="text" id="nameofmother" name="nameofmother" placeholder="Eg. Sarah" class="form-control col-md-7 col-xs-12" required>
                         </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mothermobno">Mobile No <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" id="mothermobno" name="mothermobno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        <div class="col-sm-3">
+                                <label  for="mothermobno">Mobile No <span class="required">*</span>
+                                </label>
+                                <input type="number" id="mothermobno" name="mothermobno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="col-sm-3">
+                                <label  for="motheroccupation">Occupation <span class="required">*</span>
+                                </label>
+                                <input type="text" id="motheroccupation" name="motheroccupation" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
+                      
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="motheroccupation">Occupation <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="motheroccupation" name="motheroccupation" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                    </div>    
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="resaddress">Res. Address
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="resaddress">Res. Address
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <textarea class="form-control" rows="5" id="resaddress" name="resaddress" placeholder="Address for communication" ></textarea>
@@ -119,7 +103,7 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="landmark">Landmark
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="landmark">Landmark
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <select class="form-control" id="landmark" name="landmark">
@@ -141,10 +125,10 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdmissionEnqFor">How do you know TVME Kids
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="howdouknow">How do you know TVME Kids
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control" id="AdmissionEnqFor" name="AdmissionEnqFor">
+                            <select class="form-control" id="howdouknow" name="howdouknow">
                                 <option value="Phamplets">Phamplets</option>
                                 <option value="Posters">Posters</option>
                                 <option value="Banners">Banners</option>
@@ -155,50 +139,114 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientcasetype">Attachment
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="anyreference">Any Reference.
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="file" name="Attach" id="Attach"/>
+                                <input type="text" id="anyreference" name="anyreference" placeholder="Reference." class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clienttotalamount">Total Amount
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12" for="feetold">Fee Told
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clienttotalamount" name="clienttotalamount" value="0" placeholder="Total Amount" class="form-control col-md-7 col-xs-12">
+                            <input type="text" id="feetold" name="feetold" value="0" placeholder="fee told" class="form-control col-md-7 col-xs-12">
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientpaidamount">Paid Amount
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientpaidamount" name="clientpaidamount" value="0" placeholder="Paid Amount" class="form-control col-md-7 col-xs-12" onblur="Calculatebal(this);">
-                        </div>
+                            <label class="control-label col-md-1 col-sm-3 col-xs-12" for="offergiven">Offer Given
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="offergiven" name="offergiven">
+                                        <option value="Referral">Referral</option>
+                                        <option value="Summer Camp">Summer Camp</option>
+                                        <option value="Polio">Polio</option>                                        
+                                    </select>
+                                </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientbalamount">Bal Amount
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientbalamount" name="clientbalamount" value="0" placeholder="Bal Amount" class="form-control col-md-7 col-xs-12">
-                        </div>
+                            <label class="control-label col-md-1 col-sm-3 col-xs-12" for="findfee">Find Fee
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" id="findfee" name="findfee" value="0" placeholder="fee told" class="form-control col-md-7 col-xs-12">
+                                </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientcasestage">Case Stage
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientcasestage" name="clientcasestage" placeholder="Case Stage (Eg. 1,2,3,4...)" class="form-control col-md-7 col-xs-12">
+                            <div class="col-sm-3">
+                        <label  for="typeofenquiry">Type Of Enquiry 
+                        </label>                        
+                            <select class="form-control" id="typeofenquiry" name="typeofenquiry">
+                                    <option value="90%">90%</option>
+                                    <option value="75%">75%</option>
+                                    <option value="50%">50%</option>                                        
+                                    <option value="25%">25%</option>                                        
+                                </select>
                         </div>
+                        <div class="col-sm-3">
+                                <label  for="status">Status 
+                                    </label>                        
+                                        <select class="form-control" id="status" name="status">
+                                                <option value="Joined in Playgroup">Joined in Playgroup</option>
+                                                <option value="Joined in Nursery">Joined in Nursery</option>
+                                                <option value="Joined in PP1">Joined in PP1 </option>                                        
+                                                <option value="Joined in PP2">Joined in PP2</option>                                        
+                                            </select>
+                        </div>                        
+                        <div class="help-block with-errors"></div>
+                    </div> 
+                    <div class="form-group">
+                            <div class="col-sm-3">
+                                    <label  for="finalstatus">Final Status
+                                        </label>
+                                        <input type="text" id="finalstatus" name="finalstatus" class="form-control col-md-7 col-xs-12">
+                        </div>
+                        <div class="col-sm-3">
+                                <label  for="finaldate">Final Date
+                                    </label>
+                                    <input type="text" id="finaldate" name="finaldate" class="form-control col-md-7 col-xs-12">
+                    </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group">
+                            <div class="col-sm-3">
+                                    <label  for="followup1">Follow Up 1
+                                        </label>
+                                        <input type="text" id="followup1" name="followup1" class="form-control col-md-7 col-xs-12">
+                        </div>
+                        <div class="col-sm-3">
+                                <label  for="followup1Date">Date
+                                    </label>
+                                    <input type="text" id="followup1Date" name="followup1Date" class="form-control col-md-7 col-xs-12">
+                    </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clienthearingdate">Hearing Date
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clienthearingdate" name="clienthearingdate" class="form-control col-md-7 col-xs-12">
+                            <div class="col-sm-3">
+                                    <label  for="followup2">Follow Up 2
+                                        </label>
+                                        <input type="text" id="followup2" name="followup2" class="form-control col-md-7 col-xs-12">
                         </div>
+                        <div class="col-sm-3">
+                                <label  for="followup2Date">Date
+                                    </label>
+                                    <input type="text" id="followup2Date" name="followup2Date" class="form-control col-md-7 col-xs-12">
+                    </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                            <div class="col-sm-3">
+                                    <label  for="followup3">Follow Up 3
+                                        </label>
+                                        <input type="text" id="followup3" name="followup3" class="form-control col-md-7 col-xs-12">
+                        </div>
+                        <div class="col-sm-3">
+                                <label  for="followup3Date">Date
+                                    </label>
+                                    <input type="text" id="followup3Date" name="followup3Date" class="form-control col-md-7 col-xs-12">
+                    </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="ln_solid"></div>

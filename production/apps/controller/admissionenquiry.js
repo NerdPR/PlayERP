@@ -9,21 +9,36 @@ $(document).ready(function() {
         startDate: moment(),
         locale:{format: 'DD/MMM/YYYY'}
     });
+    $('#finaldate').daterangepicker({
+        singleDatePicker: true,
+        startDate: moment(),
+        locale:{format: 'DD/MMM/YYYY'}
+    });
+    $('#followup1Date').daterangepicker({
+        singleDatePicker: true,
+        startDate: moment(),
+        locale:{format: 'DD/MMM/YYYY'}
+    });
+    $('#followup2Date').daterangepicker({
+        singleDatePicker: true,
+        startDate: moment(),
+        locale:{format: 'DD/MMM/YYYY'}
+    });
+    $('#followup3Date').daterangepicker({
+        singleDatePicker: true,
+        startDate: moment(),
+        locale:{format: 'DD/MMM/YYYY'}
+    });
     //alert($.datepicker.formatDate('dd/M/yy', new Date("20/07/2017")))
     var date = moment(); //Get the current date
     //alert(date.format("DD/MMM/YYYY"))
 });
 function SaveClient()
 {
-    var data = $("#ClientForm").serializeArray();
-    var file_data = $("#Attach").prop("files")[0];
-    var form_data = new FormData();
-    form_data.append("file", file_data)
-    var strr={"name":"clienttype","value":"PER"};
-    data.push(strr);
-    /*var strr={"name":"Attach","value":form_data};
-    data.push(strr);*/
-
+    var data = $("#AdmissionEnquiry").serializeArray();
+    
+alert(JSON.stringify(data))
+return;
     NProgress.start();
     $.ajax({
 
