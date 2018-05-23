@@ -36,14 +36,11 @@ $(document).ready(function() {
 function SaveClient()
 {
     var data = $("#AdmissionEnquiry").serializeArray();
-    
-alert(JSON.stringify(data))
-return;
     NProgress.start();
     $.ajax({
 
         type : 'POST',
-        url  : 'apps/API/Client/InsertClient.php',
+        url  : 'apps/API/Enquiry/InsertAdmissionEnquiry.php',
         data : data,
         beforeSend: function()
         {
@@ -52,16 +49,11 @@ return;
         success :  function(data)
         {
 
-            if(data==1){
-                NProgress.done();
-                $.notify("Client Name Already taken.Please Try different Client Name","info",{autoHide:false});
-
-            }
-            else if(data=="registered")
+            if(data=="registered")
             {
                 NProgress.done();
-                $.notify("New Client Created Successfully","success");
-                $('#ClientForm').get(0).reset();
+                $.notify("Saved Successfully","success");
+                $('#AdmissionEnquiry').get(0).reset();
 
             }
             else{

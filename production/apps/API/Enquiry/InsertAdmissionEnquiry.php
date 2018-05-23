@@ -74,24 +74,42 @@ if($_POST)
     try
     {
 
-        $stmt = $db_con->prepare("select * from client where clientname=:clientname");
+        /*$stmt = $db_con->prepare("select * from client where clientname=:clientname");
         $stmt->execute(array(":clientname"=>$clientname));
-        $count = $stmt->rowCount();
+        $count = $stmt->rowCount();*/
 
-        if($count==0){
+        //if($count==0){
 
-            $stmt = $db_con->prepare("INSERT INTO client (CLIENTNAME, PHNO, ADDRESS, CASETYPE, ATTACHMENT, TOTALAMOUNT, PAIDAMOUNT, BALANCEAMOUNT, CASESTAGE, HEARINGDATE,TYPECLIENT) VALUES(:clientname, :clientphno, :clientaddress, :clientcasetype, :content, :clienttotalamount, :clientpaidamount, :clientbalamount, :clientcasestage, :clienthearingdate,:clienttype)");
-            $stmt->bindParam(":clientname",$clientname);
-            $stmt->bindParam(":clientphno",$clientphno);
-            $stmt->bindParam(":clientaddress",$clientaddress);
-            $stmt->bindParam(":clientcasetype",$clientcasetype);
-            $stmt->bindParam(":clienttotalamount",$clienttotalamount);
-            $stmt->bindParam(":clientpaidamount",$clientpaidamount);
-            $stmt->bindParam(":clientbalamount",$clientbalamount);
-            $stmt->bindParam(":clientcasestage",$clientcasestage);
-            $stmt->bindParam(":content",$content);
-            $stmt->bindParam(":clienthearingdate",$clienthearingdate);
-            $stmt->bindParam(":clienttype",$clienttype);
+            $stmt = $db_con->prepare("INSERT INTO adminenq (ENQFOR,KIDNAME,KIDDOB,KIDAGE,FATHERNAME,FATHERMOB,FATHEROCC,MOTHERNAME,MOTHERMOB,MOTHEROCC,RESADDRESS,LANDMARK,HOWDOKNOW,REFERENCE,FEETOLD,OFFERGIVEN,FINALFEE,TYPEOFENQUIRY,STATUS,FINALSTATUS,FINALDATE,FOLLOWUP1,FOLL1DATE,FOLLOWUP2,FOLL2DATE,FOLLOWUP3,FOLL3DATE) values (:ENQFOR,:KIDNAME,:KIDDOB,:KIDAGE,:FATHERNAME,:FATHERMOB,:FATHEROCC,:MOTHERNAME,:MOTHERMOB,:MOTHEROCC,:RESADDRESS,:LANDMARK,:HOWDOKNOW,:REFERENCE,:FEETOLD,:OFFERGIVEN,:FINALFEE,:TYPEOFENQUIRY,:STATUS,:FINALSTATUS,:FINALDATE,:FOLLOWUP1,:FOLL1DATE,:FOLLOWUP2,:FOLL2DATE,:FOLLOWUP3,:FOLL3DATE)");
+            /*$stmt->bindParam(":ADMINENQID",$AdmissionEnqFor);*/
+            $stmt->bindParam(":ENQFOR",$AdmissionEnqFor);
+            $stmt->bindParam(":KIDNAME",$nameofkid);
+            $stmt->bindParam(":KIDDOB",$kiddob);
+            $stmt->bindParam(":KIDAGE",$kidage);
+            $stmt->bindParam(":FATHERNAME",$nameoffather);
+            $stmt->bindParam(":FATHERMOB",$fathermobno);
+            $stmt->bindParam(":FATHEROCC",$fatheroccupation);
+            $stmt->bindParam(":MOTHERNAME",$nameofmother);
+            $stmt->bindParam(":MOTHERMOB",$mothermobno);
+            $stmt->bindParam(":MOTHEROCC",$motheroccupation);
+            $stmt->bindParam(":RESADDRESS",$resaddress);
+            $stmt->bindParam(":LANDMARK",$landmark);
+            $stmt->bindParam(":HOWDOKNOW",$howdouknow);
+            $stmt->bindParam(":REFERENCE",$anyreference);
+            $stmt->bindParam(":FEETOLD",$feetold);
+            $stmt->bindParam(":OFFERGIVEN",$offergiven);
+            $stmt->bindParam(":FINALFEE",$findfee);
+            $stmt->bindParam(":TYPEOFENQUIRY",$typeofenquiry);
+            $stmt->bindParam(":STATUS",$status);
+            $stmt->bindParam(":FINALSTATUS",$finalstatus);
+            $stmt->bindParam(":FINALDATE",$finaldate);
+            $stmt->bindParam(":FOLLOWUP1",$followup1);
+            $stmt->bindParam(":FOLL1DATE",$followup1Date);
+            $stmt->bindParam(":FOLLOWUP2",$followup2);
+            $stmt->bindParam(":FOLL2DATE",$followup2Date);
+            $stmt->bindParam(":FOLLOWUP3",$followup3);
+            $stmt->bindParam(":FOLL3DATE",$followup3Date);
+
 
             if($stmt->execute())
             {
@@ -102,11 +120,11 @@ if($_POST)
                 echo "Query could not execute !";
             }
 
-        }
+       /* }
         else{
 
             echo "1"; //  not available
-        }
+        }*/
 
     }
     catch(PDOException $e){
