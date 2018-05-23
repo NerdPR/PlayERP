@@ -121,11 +121,11 @@ function Calculatebal(idd)
 {
     $("#clientbalamount").val($("#clienttotalamount").val()-idd.value);
 }
-function resetClients()
+function resetAdmission()
 {
-    $("#ClientSave").css("display","inline-table");
-    $("#ClientUpdate").css("display","none");
-    $("#ClientDelete").css("display","none");
+    $("#AdmissionSave").css("display","inline-table");
+    $("#AdmissionUpdate").css("display","none");
+    $("#AdmissionDelete").css("display","none");
 }
 function UpdateClient()
 {

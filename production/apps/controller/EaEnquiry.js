@@ -3,8 +3,8 @@
  */
 var ClienObj=[];
 $(document).ready(function() {
-    $('#ClientForm').validator();
-    $('#clienthearingdate').daterangepicker({
+    $('#EAEnquiry').validator();
+    $('#dob').daterangepicker({
         singleDatePicker: true,
         startDate: moment(),
         locale:{format: 'DD/MMM/YYYY'}
@@ -12,23 +12,20 @@ $(document).ready(function() {
     //alert($.datepicker.formatDate('dd/M/yy', new Date("20/07/2017")))
     var date = moment(); //Get the current date
     //alert(date.format("DD/MMM/YYYY"))
+    for(i=1;i<=100;i++)
+    {
+        $("#age").append('<option values="'+i+'">'+i+'</option>');
+    }
 });
 function SaveClient()
 {
-    var data = $("#ClientForm").serializeArray();
-    var file_data = $("#Attach").prop("files")[0];
-    var form_data = new FormData();
-    form_data.append("file", file_data)
-    var strr={"name":"clienttype","value":"TEMP"};
-    data.push(strr);
-    /*var strr={"name":"Attach","value":form_data};
-    data.push(strr);*/
+    var data = $("#EAEnquiry").serializeArray();  
 
     NProgress.start();
     $.ajax({
 
         type : 'POST',
-        url  : 'apps/API/Client/InsertClient.php',
+        url  : 'apps/API/Enquiry/InsertEaEnquiry.php',
         data : data,
         beforeSend: function()
         {
@@ -37,16 +34,11 @@ function SaveClient()
         success :  function(data)
         {
 
-            if(data==1){
-                NProgress.done();
-                $.notify("Client Name Already taken.Please Try different Client Name","info",{autoHide:false});
-
-            }
-            else if(data=="registered")
+            if(data=="registered")
             {
                 NProgress.done();
-                $.notify("New Client Created Successfully","success");
-                $('#ClientForm').get(0).reset();
+                $.notify("Saved Successfully","success");
+                $('#EAEnquiry').get(0).reset();
 
             }
             else{

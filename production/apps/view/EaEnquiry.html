@@ -22,89 +22,146 @@
             </div>
             <div class="x_content">
                 <br />
-                <form id="ClientForm" method="post" enctype="multipart/form-data" data-toggle="validator" class="form-horizontal form-label-left" onsubmit="SaveClient();return false;">
+                <form id="EAEnquiry" method="post" enctype="multipart/form-data" data-toggle="validator" class="form-horizontal form-label-left" onsubmit="SaveClient();return false;">
 
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientname">Client Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="EnqFOREA">Enquired For <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientname" name="clientname" onblur="FindClientName(this);" class="form-control col-md-7 col-xs-12" placeholder="Client Name" required>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientphno">Mobile No <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" id="clientphno" name="clientphno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientaddress">Address
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea class="form-control" rows="5" id="clientaddress" name="clientaddress" placeholder="Address for communication" ></textarea>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientcasetype">Type
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control" id="clientcasetype" name="clientcasetype">
-                                <option value="CIVIL">Civil</option>
-                                <option value="CRIMINAL">Criminal</option>
-                                <option value="INSURANCE">Insurance</option>
-                                <option value="CONSUMER">Consumer</option>
+                            
+                            <select class="form-control" id="EnqFOREA" name="EnqFOREA">
+                                <option value="Vocal">Vocal</option>
+                                <option value="Keyboard">Keyboard</option>
+                                <option value="Tuition">Tuition</option>
+                                <option value="Kungfu">Kungfu</option>
+                                <option value="Silambam">Silambam</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Handwriting">Handwriting</option>
                             </select>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientcasetype">Attachment
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nameofcandidate">Name Of Candidate <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="file" name="Attach" id="Attach"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clienttotalamount">Total Amount
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clienttotalamount" name="clienttotalamount" value="0" placeholder="Total Amount" class="form-control col-md-7 col-xs-12">
+                            
+                            <input type="text" id="nameofcandidate" name="nameofcandidate" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientpaidamount">Paid Amount
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="School">School
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientpaidamount" name="clientpaidamount" value="0" placeholder="Paid Amount" class="form-control col-md-7 col-xs-12" onblur="Calculatebal(this);">
+                            <select class="form-control" id="School" name="School">
+                                <option value="">Please Select</option>
+                                <option value="Pon Vidhyasharam">Pon Vidhyasharam</option>
+                                <option value="MKM">MKM</option>
+                                <option value="Omega">Omega</option>
+                                <option value="Rabindra Bharathi">Rabindra Bharathi</option>
+                                <option value="St Ann">St Ann</option>                                
+                            </select>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientbalamount">Bal Amount
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="age">Age
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientbalamount" name="clientbalamount" value="0" placeholder="Bal Amount" class="form-control col-md-7 col-xs-12">
+                            <select class="form-control" id="age" name="age">                                
+                            </select>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clientcasestage">Case Stage
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="dob">DOB
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clientcasestage" name="clientcasestage" placeholder="Case Stage (Eg. 1,2,3,4...)" class="form-control col-md-7 col-xs-12">
+                            <input type="text" id="dob" name="dob" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="parentspousename">Parent/Spouse Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="parentspousename" name="parentspousename" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="clienthearingdate">Hearing Date
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mobileno">Mobile No
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="clienthearingdate" name="clienthearingdate" class="form-control col-md-7 col-xs-12">
+                            <input type="number" id="mobileno" name="mobileno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address">Address
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <textarea class="form-control" rows="5" id="address" name="address" placeholder="Address for communication" ></textarea>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="landmark">Landmark
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" id="landmark" name="landmark">
+                                <option value="AGS Park">AGS Park</option>
+                                <option value="Arasamaram">Arasamaram</option>
+                                <option value="Sai Baba Temple">Sai Baba Temple</option>
+                                <option value="Subhasree Nagar">Subhasree Nagar</option>
+                                <option value="Mangala Nagar">Mangala Nagar</option>
+                                <option value="Kumutham Nagar Park">Kumutham Nagar Park</option>
+                                <option value="AGS Garden Last">AGS Garden Last</option>
+                                <option value="Sakthi Nagar-Post Office">Sakthi Nagar - Post Office</option>
+                                <option value="Amma Mess-Madhananthapuram">Amma Mess-Madhananthapuram</option>
+                                <option value="Kedhar Hospital">Kedhar Hospital</option>
+                                <option value="Madhananthapuram Water Tank ">Madhananthapuram Water Tank</option>
+                                <option value="Kolapakkam Road">Kolapakkam Road</option>
+                                
+                            </select>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="otherspecify">Others Specify
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="otherspecify" name="otherspecify" placeholder="Eg. John" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="wassappno">Whatsapp No
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="number" id="wassappno" name="wassappno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contactno">Contact No
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="number" id="contactno" name="contactno" placeholder="90000000" min="11" class="form-control col-md-7 col-xs-12" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="howdouknow">How do you know TVME Kids
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" id="howdouknow" name="howdouknow">
+                                <option value="Phamplets">Phamplets</option>
+                                <option value="Posters">Posters</option>
+                                <option value="Banners">Banners</option>
+                                <option value="Friends">Friends</option>
+                                <option value="Newspaper">Newspaper</option>
+                            </select>
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
@@ -125,4 +182,4 @@
         </div>
     </div>
 </div>
-<script src="apps/controller/TempClient.js"></script>
+<script src="apps/controller/EaEnquiry.js"></script>
